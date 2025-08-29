@@ -21,6 +21,10 @@ async function carregarFornadas() {
             const card = document.createElement("div");
             card.classList.add("card");
 
+            card.onclick = () => {
+                window.location.href = `detalhes/detalheFornada.html?id=${fornada.idFornada}`;
+            };
+
             const img = document.createElement("img");
             img.src = "/imagens/paes.png";
             img.alt = "Fornada";
