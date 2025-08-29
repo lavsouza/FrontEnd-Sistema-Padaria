@@ -27,3 +27,29 @@
 </body>
 
 </html>
+
+<script>
+    document.querySelectorAll(".btn-excluir").forEach(btn => {
+        btn.addEventListener("click", async () => {
+            const id = btn.getAttribute("data-id");
+
+            if (confirm(`Deseja realmente excluir a fornada #${id}?`)) {
+                try {
+                    const response = await fetch(`http://localhost:8080/fornada/excluir/${id}`, {
+                        method: "DELETE"
+                    });
+
+                    if (response.ok) {
+                        alert("Fornada excluída com sucesso!");
+                        btn.closest(".card").remove(); // remove o card da tela
+                    } else {
+                        alert("Erro ao excluir a fornada.");
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert("Erro de conexão com o servidor.");
+                }
+            }
+        });
+    });
+</script>

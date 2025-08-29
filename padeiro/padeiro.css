@@ -10,32 +10,63 @@ h1 {
   color: #333;
 }
 
-.linha-btn {
+.card-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 8px;
 }
 
-.btn-voltar, .btn-nova {
+.card-content h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.btn-excluir {
     background: none;
     border: none;
-    font-size: 28px;
     cursor: pointer;
-    color: #333;
-    transition: color 0.2s;
+    color: red;
+    font-size: 22px;
+    transition: transform 0.2s;
 }
 
-.btn-voltar:hover, .btn-nova:hover {
-    color: #f07934;
+.btn-excluir:hover {
+    transform: scale(1.2);
 }
 
-.btn-nova-fornada:hover { background-color: #b92929; }
+.linha-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-voltar,
+.btn-nova {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.btn-voltar:hover,
+.btn-nova:hover {
+  color: #f07934;
+}
+
+.btn-nova-fornada:hover {
+  background-color: #b92929;
+}
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 200px);
-  gap: 20px;
+  gap: 60px;
   justify-content: center;
 }
 
@@ -44,7 +75,7 @@ h1 {
   height: 200px;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,8 +88,16 @@ h1 {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card h2 { font-size: 18px; margin-bottom: 10px; color: #3498db; }
-.card p { font-size: 14px; color: #555; }
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
