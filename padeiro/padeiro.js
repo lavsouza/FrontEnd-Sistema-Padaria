@@ -31,7 +31,6 @@ async function carregarFornadas() {
         <p>Data: ${fornada.dataHora}</p>
       `;
 
-      // clique no card -> redireciona
       card.onclick = () => {
         window.location.href = `detalhes/cadastrarAlterarFornada.html?id=${fornada.idFornada}`;
       };

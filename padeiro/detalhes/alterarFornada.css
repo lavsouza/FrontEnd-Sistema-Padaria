@@ -1,178 +1,164 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Estilo geral */
 body {
-  background: #f8f9fa;
-  color: #333;
-  padding: 20px;
-}
-
-h1, h2 {
-  margin-bottom: 15px;
-  font-weight: 600;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f5f5f5;
 }
 
 h1 {
-  font-size: 26px;
-  color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-h2 {
-  font-size: 20px;
-  margin-top: 30px;
-  color: #34495e;
+.btn-voltar {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
 }
 
-/* Container principal */
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.btn-voltar:hover {
+    color: #f07934;
 }
 
-/* Cards de pão */
+.grid-horizontal {
+    display: flex;
+    gap: 50px;              
+    overflow-x: auto;        
+    padding: 10px;           
+}
+
+.grid-horizontal::-webkit-scrollbar {
+    height: 10px;             
+}
+
+.grid-horizontal::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
 .card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fdfdfd;
-  border: 1px solid #e1e1e1;
-  border-radius: 10px;
-  padding: 15px 20px;
-  margin-bottom: 12px;
-  transition: all 0.2s ease;
-}
-
-.card:hover {
-  background: #f3f6fa;
-  transform: translateY(-2px);
-}
-
-/* Texto do card */
-.card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.card-info strong {
-  font-size: 18px;
-  color: #2c3e50;
-}
-
-.card-info span {
-  font-size: 14px;
-  color: #7f8c8d;
-}
-
-/* Botões */
-.btn {
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.btn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* Cores */
-.btn-primary {
-  background: #3498db;
-  color: white;
-}
-
-.btn-primary:hover {
-  background: #2980b9;
-}
-
-.btn-warning {
-  background: #f39c12;
-  color: white;
-}
-
-.btn-warning:hover {
-  background: #d68910;
-}
-
-.btn-danger {
-  background: #e74c3c;
-  color: white;
-}
-
-.btn-danger:hover {
-  background: #c0392b;
-}
-
-.btn-success {
-  background: #27ae60;
-  color: white;
-}
-
-.btn-success:hover {
-  background: #1e8449;
-}
-
-/* Inputs */
-input[type="number"] {
-  width: 70px;
-  padding: 6px;
-  border: 1px solid #dcdcdc;
-  border-radius: 6px;
-  font-size: 14px;
-  text-align: center;
-}
-
-select {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #dcdcdc;
-  font-size: 14px;
-}
-
-/* Formulário de adicionar pão */
-.add-form {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.add-form button {
-  flex-shrink: 0;
-}
-
-/* Layout responsivo */
-@media (max-width: 768px) {
-  .card {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
 
-  .add-form {
-    flex-direction: column;
-    align-items: stretch;
-  }
+.card h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #f07934;
+}
 
-  input[type="number"], select, .btn {
-    width: 100%;
-  }
+.tempo-restante {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 0;
+}
+
+.card-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.btn-excluir {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 22px;
+    transition: transform 0.2s;
+}
+
+.btn-edt {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(27, 94, 240);
+    font-size: 22px;
+    transition: transform 0.2s;
+}
+
+.btn-edt:hover {
+    transform: scale(1.2);
+}
+
+.btn-excluir:hover {
+    transform: scale(1.2);
+}
+
+.card-linear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.input {
+    width: 60px;
+    padding: 4px;
+    border-radius: 4x;
+    border: 1px solid #ccc; 
+}
+
+.btn-add {
+    padding: 6px 12px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background: #27ae60;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+    transform: scale(1.2);
+}
+
+.quantidade-pao {
+    font-size: 14px;
+    color: #555;
+    margin-top: 0;
 }
