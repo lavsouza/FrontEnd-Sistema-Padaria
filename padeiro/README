@@ -1,0 +1,55 @@
+
+# Sistema Padaria - FrontEnd
+
+Este projeto é um sistema de gestão de fornadas de pães para padarias.
+Permite cadastrar fornadas, adicionar/remover pães, editar quantidades e acompanhar o tempo restante até a fornada ficar pronta
+
+
+## Funcionalidades
+
+- Listagem de fornadas ativas.
+- Visualização dos pães de cada fornada.
+- Contagem regressiva do tempo até a fornada terminar.
+- Adição de novos pães na fornada.
+- Edição da quantidade de pães em produção.
+- Exclusão de pães somente enquanto a fornada está em andamento.
+
+
+## Stack utilizada
+
+**Front-end:** 
+- Java 17+
+- Spring Boot (REST API)
+- Spring Data JPA
+- Banco de Dados PostgreSQL
+
+**Back-end:** 
+- HTML + CSS
+- JavaScript (ES6)
+- Material Icons (Google) para os ícones
+
+
+
+
+
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+git clone https://github.com/lavsouza/FrontEnd-Sistema-Padaria.git
+```
+
+Entre no diretório do projeto
+
+```bash
+cd FrontEnd-Sistema-Padaria
+```
+
+No diretório /frontend, basta abrir o arquivo `index.html` no navegador.
+(ou servir via Live Server do VSCode para facilitar).
+
+
+---
+Projeto desenvolvido por Lucas André (https://github.com/lavsouza) para fins acadêmicos e de aprendizado.

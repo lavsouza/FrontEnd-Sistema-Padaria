@@ -75,7 +75,7 @@ btnNova.onclick = async () => {
     if (!response.ok) throw new Error("Erro ao criar nova fornada");
 
     const novaFornada = await response.json(); 
-    window.location.href = `cadastrarAlterarFornada.html?id=${novaFornada.idFornada}`;
+    window.location.href = `detalhes/cadastrarAlterarFornada.html?id=${novaFornada.idFornada}`;
   } catch (error) {
     alert(error.message);
   }
